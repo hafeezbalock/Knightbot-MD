@@ -5,9 +5,9 @@ const path = require('path');
 async function helpCommand(sock, chatId, message) {
     const helpMessage = `
 ╔═══════════════════╗
-   *🤖 ${settings.botName || 'KnightBot-MD'}*  
+   *🤖 ${settings.botName || 'HafeezBot-MD'}*  
    Version: *${settings.version || '3.0.0'}*
-   by ${settings.botOwner || 'Mr Unique Hacker'}
+   by ${settings.botOwner || 'Hafeez Baloch'}
    YT : ${global.ytch}
 ╚═══════════════════╝
 
@@ -15,7 +15,7 @@ async function helpCommand(sock, chatId, message) {
 
 ╔═══════════════════╗
 🌐 *General Commands*:
-║ ➤ .help or .menu
+║ ➤ help or menu
 ║ ➤ .ping
 ║ ➤ .alive
 ║ ➤ .tts <text>
@@ -237,8 +237,8 @@ Join our channel for updates:`;
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'KnightBot MD',
+                        newsletterJid: '923003535702@newsletter',
+                        newsletterName: 'HafeezBot MD',
                         serverMessageId: -1
                     }
                 }
@@ -251,8 +251,8 @@ Join our channel for updates:`;
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'KnightBot MD by Mr Unique Hacker',
+                        newsletterJid: '923003534702@newsletter',
+                        newsletterName: 'HafeexBot MD Hafeez Baloch',
                         serverMessageId: -1
                     } 
                 }
