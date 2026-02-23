@@ -84,6 +84,9 @@ const { clearCommand } = require('./commands/clear');
 const pingCommand = require('./commands/ping');
 const aliveCommand = require('./commands/alive');
 const blurCommand = require('./commands/img-blur');
+const { birdhit } = require('./commands/birdhit');
+const { adsb: adsbCommand } = require('./commands/adsb');
+const { report } = require('./commands/report');
 const { welcomeCommand, handleJoinEvent } = require('./commands/welcome');
 const { goodbyeCommand, handleLeaveEvent } = require('./commands/goodbye');
 const githubCommand = require('./commands/github');
@@ -396,6 +399,26 @@ async function handleMessages(sock, messageUpdate, printLog) {
                     }
                 }
                 break;
+                }
+
+          case userMessage.startsWith('report'): {
+           const args = userMessage.split(' ').slice(1);
+        await report(sock, message, args);
+          break;
+          }
+
+         case userMessage.startsWith('birdhit'):
+         case userMessage.startsWith('bh'): {
+          const args = userMessage.split(' ').slice(1);
+           await birdhit(sock, message, args);
+          break;
+           }
+
+          case userMessage.startsWith('adsb'): {
+         const args = userMessage.split(' ').slice(1); 
+           await adsbCommand(sock, message, args);
+            break;
+             }
             case userMessage === 'unmute':
                 await unmuteCommand(sock, chatId, senderId);
                 break;
